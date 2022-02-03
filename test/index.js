@@ -19,3 +19,13 @@ describe("isPalindrome", () => {
     expect(isPalindrome("ab")).to.be.false;
   });
 });
+
+function reverseString(str){
+  return str.split("").reverse().join("");
+}
+
+function isPalindrome(str){
+  const wordReverse = reverseString(str);
+
+  return str === wordReverse;
+}
